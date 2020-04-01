@@ -5,7 +5,6 @@
 #4- vv/n valor de la varianza
 import numpy as np
 import pandas as pd
-import statistics as st
 
 
 def mensaje():
@@ -20,9 +19,9 @@ def AnalizarDatos(datos):
     a = pd.value_counts(datos) #encontras la frecuencia absoluta de cada numero
     dataframe = pd.DataFrame(a, columns=["FrAbs"])
     print(dataframe)
-    print("media aritmetica", st.mean(datos)) #mostrar media aritmetica
-    print("desviacion estandar", st.pstdev(datos,st.mean(datos)))
-    print("varianza", st.variance(datos))
+    print("media aritmetica", np.mean(datos)) #mostrar media aritmetica
+    print("desviacion estandar", np.std(datos))
+    print("varianza", np.var(datos))
 
 
 
